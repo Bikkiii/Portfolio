@@ -7,7 +7,7 @@
   cursor: pointer;
   /* cursor: grab; */
   z-index: 50;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 .sidebar_hamburger_translate {
@@ -27,7 +27,8 @@
   padding: 100px 20px;
   z-index: 20;
   /* transform: translateX(-200px); */
-  transition-duration: 300ms;
+  transition-duration: 500ms;
+  justify-content: center;
 }
 
 .sidebar_content.active {
@@ -49,12 +50,14 @@
 }
 
 .sidebar_image {
+  /* margin: auto; */
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: -50px;
+  margin-bottom: 200px;
+  margin-left: 55px;
 }
 .sidebar__name {
   font-size: 22px;
@@ -64,6 +67,7 @@
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
+  margin-top: -200px;
 }
 .sidebar__job {
   font-size: 12px;
@@ -82,7 +86,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .sidebar__list__item {
@@ -114,7 +118,7 @@
 
 .sidebar__copyright {
   padding: 0 20px;
-  margin-bottom: 30px;
+  margin-bottom: -50px;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
   font-size: 12px;

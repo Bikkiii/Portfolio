@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,23 +27,37 @@
     <link rel="stylesheet" href="css/skill.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/work-count.css" />
   </head>
   <body>
     <nav class="sidebar">
-      <i
-        id="hamburger"
-        class="fa-solid fa-bars sidebar_hamburger sidebar_hamburger_translate"
-      ></i>
+      <i id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
 
       <div class="sidebar_content">
-        <ul class="sidebar_list">
+        <img class="sidebar_image" src="images/photo.jpg" alt="Profile Image" />
+        <h1 class="sidebar__name">Bikash Dhami</h1>
+        <h2 class="sidebar__job">
+          Computer Engineering Student <span>in Nepal</span>
+        </h2>
+        <ul class="sidebar__list">
           <li>
-            <a href="#hero">Hero</a>
+            <a href="#hero">Home</a>
           </li>
           <li>
-            <a href="#skill">Skills</a>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
+        <p class="sidebar__copyright">
+          &copy; 2026 All rights reserved | Made with &#10084; by
+          <span>Bikash</span>
+        </p>
       </div>
     </nav>
     <section id="hero">
@@ -68,12 +82,9 @@
       <p class="section_subtitle">Who am i?</p>
 
       <p class="about_description">
-        <strong>Hi, I am Bikash.</strong> <br />Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Exercitationem officia, adipisci aliquam
-        dicta impedit quod mollitia accusamus ab odio culpa reprehenderit non
-        ipsum iure reiciendis sunt fuga sed aspernatur quas fugiat ipsa
-        voluptatem repellat accusantium? Nulla repellat ab atque magni nihil
-        excepturi facere nam vel.
+        <strong>Hi, I am Bikash.</strong> <br />BE Computer Engineering student.
+        I am looking forward to my first work experience. Excited to contribute
+        to innovative projects and learn from experienced Members
       </p>
 
       <div class="about_skills">
@@ -99,6 +110,17 @@
       </div>
     </section>
 
+    <section id="work__count">
+      <span>15</span>
+      <span>cups of coffee</span>
+      <span>38</span>
+      <span>projects</span>
+      <span>1</span>
+      <span>clients</span>
+      <span>2</span>
+      <span>partners</span>
+    </section>
+
     <section id="skills" class="section">
       <p class="section_title">My Speciality</p>
       <p class="section_subtitle">My skills</p>
@@ -118,9 +140,9 @@
           <div class="skill_bg_box">
             <div
               class="skill_percent_box"
-              style="background: red; color: red; width: 70%"
+              style="background: red; color: red; width: 60%"
             >
-              <span>70%</span>
+              <span>60%</span>
             </div>
           </div>
         </div>
@@ -130,13 +152,13 @@
           <div class="skill_bg_box">
             <div
               class="skill_percent_box"
-              style="background: green; color: green; width: 70%"
+              style="background: green; color: green; width: 50%"
             >
-              <span>70%</span>
+              <span>50%</span>
             </div>
           </div>
         </div>
-
+        <!-- 
         <div class="skill">
           <p>CSS3</p>
           <div class="skill_bg_box">
@@ -147,7 +169,7 @@
               <span>70%</span>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- <div class="skill">
           <p>CSS3</p>
@@ -166,31 +188,62 @@
           <div class="skill_bg_box">
             <div
               class="skill_percent_box"
-              style="background: coral; color: coral; width: 70%"
+              style="background: coral; color: coral; width: 80%"
             >
-              <span>70%</span>
+              <span>80%</span>
             </div>
           </div>
         </div>
 
         <div class="skill">
-          <p>CSS3</p>
+          <p>CS++</p>
           <div class="skill_bg_box">
             <div
               class="skill_percent_box"
-              style="background: purple; color: purple; width: 70%"
+              style="background: purple; color: purple; width: 75%"
             >
-              <span>70%</span>
+              <span>75%</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="contact" class="section">
+      <p class="section_title">Get In Touch</p>
+      <p class="section_subtitle">Contact</p>
+
+      <form
+        action=""
+        id="contactForm"
+        class="contact__form"
+        onsubmit="submitForm(event)"
+      >
+        <input
+          type="text"
+          placeholder="Name"
+          id="name"
+          name="name"
+          class="contact__input"
+        />
+        <br /><br />
+        <textarea
+          name="message"
+          id="message"
+          class="contact__textarea"
+          placeholder="Message"
+          rows="4"
+        ></textarea>
+        <button class="contact__button" type="submit">Send Message</button>
+      </form>
+    </section>
     <script>
       const hamburger = document.querySelector("#hamburger");
+      const sidebar = document.querySelector(".sidebar_content");
 
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("sidebar_hamburger_translate");
+        sidebar.classList.toggle("active");
       });
     </script>
   </body>
